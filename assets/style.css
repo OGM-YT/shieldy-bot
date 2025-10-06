@@ -7,55 +7,93 @@
 html,body{height:100%}
 body{
   margin:0;color:var(--text);
-  font:16px/1.6 ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  font:16px/1.65 ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   background:
     radial-gradient(1200px 600px at 12% -10%,rgba(0,209,255,.10),transparent),
     radial-gradient(900px 600px at 85% 110%,rgba(0,255,133,.10),transparent),
     radial-gradient(800px 500px at 80% 10%,rgba(255,63,216,.06),transparent),
     var(--bg);
 }
+
+/* Layout */
 .container{width:min(1100px,92%);margin:0 auto}
-.nav{display:flex;align-items:center;gap:18px;padding:18px 0}
-.logo-wrap{display:flex;align-items:center;gap:12px}
+h1,h2,h3{letter-spacing:.2px}
+p{margin:.6em 0}
+.lead{font-size:1.1rem;color:#d8e6ff}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter: blur(12px);
+  background:linear-gradient(180deg,rgba(11,15,20,.75),rgba(11,15,20,.55));
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav{display:flex;align-items:center;gap:14px;padding:10px 0}
+.logo-wrap{display:flex;align-items:center;gap:10px}
 .logo{width:40px;height:40px;object-fit:contain;border-radius:10px;box-shadow:0 0 18px rgba(0,209,255,.25)}
-.brand{font-weight:800;letter-spacing:.5px}
-.nav .spacer{flex:1}
-.nav a, .nav button.link{color:var(--text);opacity:.85;background:transparent;border:0;cursor:pointer}
-.nav a:hover, .nav button.link:hover{opacity:1}
-.lang-switch{display:flex;align-items:center;gap:6px;margin-left:14px}
-.lang-btn{color:var(--muted);font-weight:700;font-size:.9rem;letter-spacing:.3px}
-.lang-btn:hover{color:var(--a1)}
-.sep{color:var(--muted);opacity:.6}
+.brand{font-weight:900;letter-spacing:.6px}
+.spacer{flex:1}
+
+/* NAV Buttons */
+.nav-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.15);
+  color:var(--text); text-decoration:none; font-weight:700; opacity:.92;
+  background:linear-gradient(90deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  box-shadow:var(--shadow); transition:transform .08s ease, opacity .15s ease, box-shadow .2s ease;
+}
+.nav-btn:hover{opacity:1; transform:translateY(-1px); box-shadow:0 10px 30px rgba(0,0,0,.45), 0 0 20px rgba(0,209,255,.15)}
+.nav-btn.primary{
+  border:none; color:#00121a;
+  background:linear-gradient(90deg,var(--a1),var(--a2),var(--a4),var(--a3)); background-size:300% 100%;
+}
+.nav-btn.primary:hover{animation:flow 3s linear infinite}
+
+/* Language Switch */
+.switch{
+  --w:58px; --h:30px;
+  position:relative; width:var(--w); height:var(--h); border-radius:999px;
+  background:linear-gradient(90deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.12); cursor:pointer;
+}
+.switch .knob{
+  position:absolute; top:3px; left:3px; width:24px; height:24px; border-radius:999px;
+  background:linear-gradient(180deg,#fff,#d7f7ff); color:#00121a; font-size:.75rem; font-weight:800;
+  display:flex; align-items:center; justify-content:center; transition:left .2s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,.35), 0 0 16px rgba(0,209,255,.35);
+}
+.switch.active .knob{ left: calc(var(--w) - 27px);}
+
+/* HERO Banner (Parallax) */
+/* WICHTIG: Pfad korrekt relativ zur CSS-Datei! */
 .hero{
-  position:relative;overflow:hidden;padding:72px 0 56px;margin-bottom:26px;border-radius:18px;
-  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
-  border:1px solid rgba(255,255,255,.08); box-shadow:var(--shadow);
+  position:relative; height:52vh; min-height:420px; display:flex; align-items:flex-end;
+  border-bottom:1px solid rgba(255,255,255,.08); overflow:hidden;
 }
-.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
-.badge{
-  display:inline-block;padding:8px 12px;border-radius:999px;font-weight:700;color:#00121a;
-  background:linear-gradient(90deg,var(--a1),var(--a2),var(--a4),var(--a3));background-size:300% 100%;
-  box-shadow:0 0 24px rgba(0,209,255,.25);
+.hero-bg{
+  position:absolute; inset:0;
+  background: center/cover no-repeat url('banner.jpg'); /* <-- FIX: nicht 'assets/banner.jpg' */
+  transform:scale(1.08); transition:transform .2s ease, filter .2s ease, opacity .2s ease;
 }
-h1{margin:0;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.12;letter-spacing:.2px}
-.subtitle{color:var(--muted);max-width:780px}
-.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:6px}
-.btn{
-  display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;border:0;cursor:pointer;
-  background:linear-gradient(90deg,var(--a1),var(--a2),var(--a4),var(--a3));background-size:300% 100%;
-  color:#00121a;font-weight:800;letter-spacing:.3px;box-shadow:var(--shadow);transition:transform .1s ease;
+.hero-overlay{position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.15) 0%, rgba(11,15,20,.9) 80%);}
+.hero-content{
+  position:relative; z-index:2; padding:38px 0 28px; width:100%;
+  text-align:center; display:flex; flex-direction:column; align-items:center; /* <-- zentriert */
 }
-.btn:hover{animation:flow 3s linear infinite}
-.btn:active{transform:scale(.98)}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.18)}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.4rem); margin:0 0 12px}
+.hero .lead{max-width:900px}
+
+/* Sections / Cards */
 section{padding:56px 0}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .card{
   background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
-  border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)
+  border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)
 }
-.card h3{margin:0 0 8px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .small{color:var(--muted)}
 footer{padding:38px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,.08);margin-top:30px}
-@media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+
+/* Responsive */
+@media (max-width:950px){ .grid-3{grid-template-columns:1fr} .grid-2{grid-template-columns:1fr} .hero{height:44vh}}
 @keyframes flow{0%{background-position:0% 50%}100%{background-position:100% 50%}}
