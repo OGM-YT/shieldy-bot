@@ -2,41 +2,63 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Datenschutz – Shieldy</title><link rel="stylesheet" href="assets/style.css">
+  <title>Datenschutz – Shieldy</title>
+  <link rel="stylesheet" href="assets/style.css"><script defer src="assets/script.js"></script>
 </head>
 <body>
-<header class="container">
-  <nav class="nav">
-    <div class="logo-wrap"><img class="logo" src="assets/logo.png" alt="Shieldy"><span class="brand">SHIELDY</span></div>
+<div class="navbar">
+  <div class="container nav">
+    <div class="logo-wrap"><img class="logo" src="assets/logo.png" alt="Logo"><span class="brand">SHIELDY</span></div>
     <div class="spacer"></div>
-    <a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="pakete.html">Pakete</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a>
-    <div class="lang-switch"><a href="en/privacy.html" class="lang-btn">EN</a><span class="sep">/</span><a href="datenschutz.html" class="lang-btn">DE</a></div>
-  </nav>
+    <a class="nav-btn" href="index.html">Start</a>
+    <a class="nav-btn" href="funktionen.html">Funktionen</a>
+    <a class="nav-btn" href="preise.html">Preise</a>
+    <a class="nav-btn primary" href="datenschutz.html">Datenschutz</a>
+    <a class="nav-btn" href="impressum.html">Impressum</a>
+    <div class="switch" title="DE / EN"><div class="knob">DE</div></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Datenschutz (Art. 13 DSGVO)</h1>
+    <p class="lead">Wir speichern nur, was zur Freischaltung und zum sicheren Betrieb des Bots nötig ist.</p>
+  </div>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="badge">Datenschutz</span>
-      <h1>Informationen nach Art. 13 DSGVO</h1>
-      <p class="subtitle">Wir speichern nur das Nötigste, um die Freischaltung je Discord-Server zu ermöglichen.</p>
-    </div>
-  </section>
-
   <section>
     <div class="card">
-      <h3>1. Verantwortlicher</h3><p class="small">Name/Firma, Anschrift, E-Mail (bitte ergänzen)</p>
-      <h3>2. Verarbeitete Daten</h3>
-      <ul class="small">
-        <li>Discord Guild-ID, Tier (Paket), Status (Lifetime aktiv/inaktiv)</li>
-        <li>Optional: Stripe-Customer-ID & Payment-ID (Nachweis)</li>
-        <li>Moderations-Logs verbleiben in deinem Discord-Server.</li>
+      <h2>1. Verantwortlicher</h2>
+      <p><strong>Name:</strong> Tim<br><strong>Land</strong> Dänemark<br><strong>E-Mail:</strong> ogmyt.busines@gmail.com</p>
+
+      <h2>2. Verarbeitete Daten</h2>
+      <ul>
+        <li>Discord-Server-ID (Guild ID), Servername (Lizenzverwaltung)</li>
+        <li>Lizenzstatus (Lifetime aktiv/inaktiv), Zeitstempel der Freischaltung</li>
+        <li>Stripe-Customer-/Payment-ID (kein Zugriff auf vollständige Zahlungsdaten)</li>
+        <li>Moderations-Logs verbleiben im Discord-Server</li>
       </ul>
-      <h3>3. Zwecke & Rechtsgrundlagen</h3><p class="small">Vertrag (Art. 6 Abs. 1 lit. b), berechtigtes Interesse (lit. f).</p>
-      <h3>4. Speicherdauer</h3><p class="small">Bis Löschanfrage bzw. solange die Leistung bereitsteht.</p>
-      <h3>5. Empfänger</h3><p class="small">Stripe (Payment), ggf. OpenAI/Hive (Moderation) gemäß deren Bedingungen.</p>
-      <h3>6. Betroffenenrechte</h3><p class="small">Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Beschwerde bei einer Aufsichtsbehörde.</p>
-      <h3>7. Kontakt</h3><p class="small">E-Mail für Datenschutzanfragen (bitte ergänzen)</p>
+
+      <h2>3. Zwecke & Rechtsgrundlagen</h2>
+      <p>Erfüllung der Nutzung/Freischaltung (Art. 6 Abs. 1 lit. b), Betrieb & Sicherheit (Art. 6 Abs. 1 lit. f DSGVO).</p>
+
+      <h2>4. Speicherdauer</h2>
+      <p>Solange der Dienst genutzt wird bzw. gesetzliche Pflichten es erfordern; danach Löschung/Anonymisierung.</p>
+
+      <h2>5. Empfänger</h2>
+      <ul>
+        <li>Stripe, Inc. (Zahlungsabwicklung)</li>
+        <li>Ggf. KI-Moderationsanbieter (OpenAI/Hive) gemäß deren Bedingungen</li>
+      </ul>
+
+      <h2>6. Rechte</h2>
+      <p>Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Beschwerde bei einer Aufsichtsbehörde.</p>
+
+      <h2>7. Hosting</h2>
+      <p>Statische Seite via GitHub Pages; dabei können technische Zugriffsdaten (z. B. IP-Adresse) verarbeitet werden.</p>
+
     </div>
   </section>
 </main>

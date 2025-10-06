@@ -2,36 +2,59 @@
 <html lang="de">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Funktionen – Shieldy</title><link rel="stylesheet" href="assets/style.css">
+  <title>Funktionen – Shieldy</title>
+  <link rel="stylesheet" href="assets/style.css"><script defer src="assets/script.js"></script>
 </head>
 <body>
-<header class="container">
-  <nav class="nav">
-    <div class="logo-wrap"><img class="logo" src="assets/logo.png" alt="Shieldy"><span class="brand">SHIELDY</span></div>
+<div class="navbar">
+  <div class="container nav">
+    <div class="logo-wrap"><img class="logo" src="assets/logo.png" alt="Logo"><span class="brand">SHIELDY</span></div>
     <div class="spacer"></div>
-    <a href="index.html">Start</a><a href="funktionen.html">Funktionen</a><a href="pakete.html">Pakete</a><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a>
-    <div class="lang-switch"><a href="en/features.html" class="lang-btn">EN</a><span class="sep">/</span><a href="funktionen.html" class="lang-btn">DE</a></div>
-  </nav>
+    <a class="nav-btn" href="index.html">Start</a>
+    <a class="nav-btn primary" href="funktionen.html">Funktionen</a>
+    <a class="nav-btn" href="preise.html">Preise</a>
+    <a class="nav-btn" href="datenschutz.html">Datenschutz</a>
+    <a class="nav-btn" href="impressum.html">Impressum</a>
+    <div class="switch" title="DE / EN"><div class="knob">DE</div></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Alles drin, was Mods brauchen.</h1>
+    <p class="lead">Shieldy analysiert Nachrichten & Anhänge, setzt Regeln durch und dokumentiert Entscheidungen automatisch.</p>
+  </div>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="badge">Funktionen</span>
-      <h1>Alles drin, was Mods lieben.</h1>
-      <p class="subtitle">Shieldy prüft Nachrichten & Anhänge, setzt Timeouts und protokolliert zuverlässig im #mod-logs.</p>
-      <div class="btns"><a class="btn" href="pakete.html">Jetzt freischalten</a><a class="btn ghost" href="index.html">Zur Startseite</a></div>
-    </div>
-  </section>
-
   <section>
     <div class="grid-3">
-      <div class="card"><h3>Textmoderation</h3><p class="small">Toxizität, Hate Speech, Belästigung & mehr. Deutsch kompatibel.</p></div>
-      <div class="card"><h3>Bild/Meme-Check</h3><p class="small">Erkennt NSFW/Gewalt sowie Meme-Text (OCR-gestützt, falls aktiviert).</p></div>
-      <div class="card"><h3>Automatische Strafen</h3><p class="small">Nachricht löschen, Timeout, Logs posten. Rollen-Whitelist für Lehrkräfte/Mods.</p></div>
-      <div class="card"><h3>Onboarding</h3><p class="small">Beim Joinen postet der Bot ein Setup-Panel – keine Konfiguration nötig.</p></div>
-      <div class="card"><h3>Stripe Checkout</h3><p class="small">/buy &lt;paket&gt; → Checkout → Freischaltung per Webhook.</p></div>
-      <div class="card"><h3>Owner-Bypass</h3><p class="small">OWNER_ID in <code>.env</code> = volle Nutzung zum Testen.</p></div>
+      <div class="card">
+        <h3>Textmoderation</h3>
+        <p>Erkennung von <strong>Toxizität</strong>, <strong>Hate Speech</strong>, <strong>Belästigung</strong>, Spam.
+          Verstöße werden gelöscht; Wiederholungstäter erhalten automatisch Timeout.</p>
+      </div>
+      <div class="card">
+        <h3>Bild/Meme-Check</h3>
+        <p>Prüft Bilder & GIFs auf NSFW/Gewalt/Regelverstöße. Falls aktiviert, wird Meme-Text via OCR berücksichtigt.</p>
+      </div>
+      <div class="card">
+        <h3>Automatische Strafen</h3>
+        <p>Konsequent & fair: Entfernen, Timeout, Hinweis. Whitelist-Rollen (z. B. Lehrkräfte) sind ausgenommen.</p>
+      </div>
+      <div class="card">
+        <h3>Protokolle</h3>
+        <p>Jede Maßnahme erscheint im <code>#mod-logs</code> mit Kontext – transparent und nachvollziehbar.</p>
+      </div>
+      <div class="card">
+        <h3>Onboarding</h3>
+        <p>Beim Joinen postet der Bot eine kompakte Anleitung. Fehlt <code>#mod-logs</code>, wird er erstellt.</p>
+      </div>
+      <div class="card">
+        <h3>Freischaltung</h3>
+        <p>Einmalige Zahlung per <code>/buy</code> oder Partnercode per <code>/redeemcode</code>. Danach ist alles aktiv.</p>
+      </div>
     </div>
   </section>
 </main>
