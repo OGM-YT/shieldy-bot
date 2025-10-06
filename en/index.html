@@ -2,30 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Shieldy – AI Moderation</title><link rel="stylesheet" href="../assets/style.css">
+  <title>Shieldy – AI Moderation</title>
+  <link rel="stylesheet" href="../assets/style.css"><script defer src="../assets/script.js"></script>
 </head>
 <body>
-<header class="container">
-  <nav class="nav">
-    <div class="logo-wrap"><img class="logo" src="../assets/logo.png" alt="Shieldy Logo"><span class="brand">SHIELDY</span></div>
+<div class="navbar">
+  <div class="container nav">
+    <div class="logo-wrap"><img class="logo" src="../assets/logo.png" alt="Logo"><span class="brand">SHIELDY</span></div>
     <div class="spacer"></div>
-    <a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy</a><a href="imprint.html">Imprint</a>
-    <div class="lang-switch"><a href="../index.html" class="lang-btn">DE</a><span class="sep">/</span><a href="index.html" class="lang-btn">EN</a></div>
-  </nav>
+    <a class="nav-btn primary" href="index.html">Home</a>
+    <a class="nav-btn" href="features.html">Features</a>
+    <a class="nav-btn" href="pricing.html">Pricing</a>
+    <a class="nav-btn" href="privacy.html">Privacy</a>
+    <a class="nav-btn" href="imprint.html">Imprint</a>
+    <div class="switch" title="EN / DE"><div class="knob">EN</div></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Clean communities – automatically.</h1>
+    <p class="lead">Shieldy is an AI moderation bot for Discord. It detects toxic text & memes,
+      removes them, applies timeouts, and logs everything in #mod-logs. One-time activation – zero setup.</p>
+  </div>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="badge">AI Moderation</span>
-      <h1>Clean communities – automatically.</h1>
-      <p class="subtitle">Shieldy detects toxic text & memes, removes them and handles timeouts – no setup needed.</p>
-      <div class="btns">
-        <a class="btn" href="features.html">🧩 Features</a>
-        <a class="btn" href="pricing.html">💳 Pricing</a>
-        <a class="btn ghost" href="privacy.html">⚖️ Privacy</a>
-        <a class="btn ghost" href="imprint.html">📄 Imprint</a>
+  <section>
+    <div class="grid-2">
+      <div class="card">
+        <h2>Why Shieldy?</h2>
+        <p>In schools and community servers, inappropriate content appears frequently. Shieldy reacts within seconds – before things escalate. Focus on <strong>simplicity</strong> and <strong>privacy</strong>.</p>
+        <p>Zero-setup: On join, the bot posts instructions, creates <code>#mod-logs</code> if missing, and is ready.</p>
       </div>
+      <div class="card">
+        <h2>Activation</h2>
+        <p>There is a single <strong>lifetime package</strong>. All purchases happen in Discord only: use <code>/buy</code>. Partners unlock via <code>/redeemcode &lt;code&gt;</code>.</p>
+        <p class="small">After payment/redeem, your server is activated automatically – no extra steps.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid-3">
+      <div class="card"><h3>🛡️ AI Moderation</h3><p class="small">Scans text & images, deletes violations, applies timeouts.</p></div>
+      <div class="card"><h3>📜 Logs</h3><p class="small">Transparent actions in <code>#mod-logs</code> for admins.</p></div>
+      <div class="card"><h3>⚙️ Zero-Setup</h3><p class="small">Invite and go. Auto-instructions & channel setup included.</p></div>
     </div>
   </section>
 </main>

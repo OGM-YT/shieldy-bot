@@ -2,33 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Pricing – Shieldy</title><link rel="stylesheet" href="../assets/style.css">
+  <title>Pricing – Shieldy</title>
+  <link rel="stylesheet" href="../assets/style.css"><script defer src="../assets/script.js"></script>
 </head>
 <body>
-<header class="container">
-  <nav class="nav">
-    <div class="logo-wrap"><img class="logo" src="../assets/logo.png" alt="Shieldy"><span class="brand">SHIELDY</span></div>
+<div class="navbar">
+  <div class="container nav">
+    <div class="logo-wrap"><img class="logo" src="../assets/logo.png" alt="Logo"><span class="brand">SHIELDY</span></div>
     <div class="spacer"></div>
-    <a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy</a><a href="imprint.html">Imprint</a>
-    <div class="lang-switch"><a href="../pakete.html" class="lang-btn">DE</a><span class="sep">/</span><a href="pricing.html" class="lang-btn">EN</a></div>
-  </nav>
+    <a class="nav-btn" href="index.html">Home</a>
+    <a class="nav-btn" href="features.html">Features</a>
+    <a class="nav-btn primary" href="pricing.html">Pricing</a>
+    <a class="nav-btn" href="privacy.html">Privacy</a>
+    <a class="nav-btn" href="imprint.html">Imprint</a>
+    <div class="switch" title="EN / DE"><div class="knob">EN</div></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>One-time payment → Lifetime.</h1>
+    <p class="lead">Activation happens only inside Discord. No buy button on the website.</p>
+  </div>
 </header>
 
 <main class="container">
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="badge">Pricing</span>
-      <h1>One-time payment → Lifetime.</h1>
-      <p class="subtitle">Purchase inside Discord via <strong>/buy &lt;tier&gt;</strong>. After payment, your server unlocks automatically.</p>
-      <div class="btns"><a class="btn ghost" href="index.html">Back to Home</a></div>
-    </div>
-  </section>
-
   <section>
-    <div class="grid-3">
-      <div class="card"><h3>Basic</h3><p class="small">Core moderation (text), log embeds, auto timeouts.</p><p><strong>one-time</strong> – your price</p><p class="small">Buy: <code>/buy basic</code></p></div>
-      <div class="card"><h3>Pro</h3><p class="small">+ Image/Meme moderation (recommended), auto setup.</p><p><strong>one-time</strong> – your price</p><p class="small">Buy: <code>/buy pro</code></p></div>
-      <div class="card"><h3>Enterprise</h3><p class="small">+ Priority limits & support.</p><p><strong>one-time</strong> – your price</p><p class="small">Buy: <code>/buy enterprise</code></p></div>
+    <div class="card">
+      <h2>Lifetime Module</h2>
+      <p>
+        Permanent access to AI moderation (text & images), automatic timeouts, and transparent logs in <code>#mod-logs</code>.
+      </p>
+      <ul>
+        <li>AI moderation for text & memes (images/GIFs)</li>
+        <li>Automatic actions (delete/timeout) + whitelist roles</li>
+        <li>Zero-setup: auto instructions & channel setup</li>
+        <li>Transparent logging</li>
+      </ul>
+      <h3>How to unlock</h3>
+      <p>
+        In Discord, run <code>/buy</code>.<br>
+        Partners use <code>/redeemcode &lt;code&gt;</code>.<br>
+        Your server will be unlocked automatically afterwards.
+      </p>
+      <p class="small">Note: Pricing is shown inside Discord. This website is informational only.</p>
     </div>
   </section>
 </main>
